@@ -255,7 +255,7 @@ body{background-color: #e3e3e3;}
 	height: 126px;
 }
 #todayArts-content .todayTvList{
-	width: 1182px;
+	width: 1180px;
 	/*background: red;*/
 	margin: 0 auto;
 	overflow: hidden;
@@ -268,6 +268,8 @@ body{background-color: #e3e3e3;}
 }
 #todayArts-content li{
 	float:  left;
+}
+#todayArts-content li:not(:nth-of-type(5n)){
 	margin-right: 20px;
 }
 #todayArts-content .leftCon{

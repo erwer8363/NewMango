@@ -124,19 +124,25 @@ $(document).ready(function() {
 		tvBar.animate({marginLeft:dir},'slow');
 	});
 	
-	var wid = $(".todayTvList li").outerWidth(true);
+//	var wid = $(".todayTvList li").outerWidth(true);
+    var wid = $(".todayTvList").width();
+    var totalWid = $(".todayTvList ul").width();
+    var page = parseInt(totalWid/wid);
+    var curPage=0;
 	$(".todayRight").click(function(){
 		$(this).parent().prev('a').addClass('leftCon');
-		$(".todayTvList ul").animate({marginLeft:'-='+(wid*5)+'px'},'slow');
-		if($(".todayTvList ul").offset().left <=-999){
+		$(".todayTvList ul").animate({marginLeft:'-='+wid+'px'},'slow');
+		curPage++;
+		if(curPage >=page-1)
+		{
 			$(this).parent().removeClass('rightCon');
 		}
-		console.log($(".todayTvList ul").offset().left);
 	});
 	$(".todayLeft").click(function(){
+		curPage--;
 		$(this).parent().next().addClass('rightCon');
-		$(".todayTvList ul").animate({marginLeft:'+='+(wid*5)+'px'},'slow');
-		if($(".todayTvList ul").offset().left >=-999){
+		$(".todayTvList ul").animate({marginLeft:'+='+wid+'px'},'slow');
+		if(curPage <=0){
 			$(this).parent().removeClass('leftCon');
 		}
 		console.log($(".todayTvList ul").offset().left);
