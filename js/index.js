@@ -124,7 +124,6 @@ $(document).ready(function() {
 		tvBar.animate({marginLeft:dir},'slow');
 	});
 	
-//	var wid = $(".todayTvList li").outerWidth(true);
     var wid = $(".todayTvList").width();
     var totalWid = $(".todayTvList ul").width();
     var page = parseInt(totalWid/wid);
@@ -166,4 +165,25 @@ $(document).ready(function() {
 			$(this).parent().removeClass('leftTvCon');
 		}
 	});
+	
+	var conWid = $(".adContainer").width();
+	var listWid = $(".adList").width();
+	var totaladPage = parseInt(listWid/conWid);
+	var curPage = 0;
+	$(".rightAdArrow").click(function(){
+		curPage++;
+		$(this).parent().prev().addClass('leftAdCon');
+		$(".adContainer .adList").animate({left:-(conWid*curPage)+'px'},'slow');
+		if(curPage >=totaladPage-1){
+			$(this).parent().removeClass('rightAdCon');
+		}
+	});
+	$(".leftAdArrow").click(function(){
+		curPage--;
+		$(this).parent().next().addClass('rightAdCon');
+		$(".adContainer .adList").animate({left:-(conWid*curPage)+'px'},'slow');
+		if(curPage<=0){
+			$(this).parent().removeClass('leftAdCon');
+		}
+	})
 });

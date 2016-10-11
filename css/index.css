@@ -424,20 +424,52 @@ body{background-color: #e3e3e3;}
 	line-height: 72px;
 }
 .advanture .adContainer{
-	width: 1182px;
-	height: 126px;
+	width: 1200px;
+	height: 130px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 .advanture .adList{
-	width: 3580px;
+	width: 3600px;
 	height: 126px;
 	display: block;
 	position: relative;
 }
-.advanture li:not(:last-child){
+.advanture li{
 	float: left;
+	border: 2px solid white;
+}
+.advanture li:hover{
+	border: 2px solid saddlebrown;
+}
+.advanture li:not(:nth-of-type(5n)){
 	margin-right: 20px;
+}
+.advanture .leftAdCon{
+	width: 68px;
+	height: 68px;
+	position: absolute;
+	top: 90px;
+	left: 10px;
+}
+.leftAdCon .leftAdArrow{
+	display: block;
+	width: 70px;
+	height: 128px;
+	background: url(../img/slider-ie2.png) no-repeat -512px;
+}
+.advanture .rightAdCon{
+	width: 68px;
+	height: 68px;
+	position: absolute;
+	right: 20px;
+	top: 90px;
+}
+.rightAdCon .rightAdArrow{
+	display: block;
+	width: 70px;
+	height: 128px;
+	background: url(../img/slider-ie2.png) no-repeat -437px;
 }
 .cfooter{
 	width: 100%;
