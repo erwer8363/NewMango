@@ -3,6 +3,7 @@ a{text-decoration: none; cursor: pointer;}
 ol,ul {list-style: none;}
 img {display: block;vertical-align: top; border: none;}
 body{background-color: #e3e3e3;}
+li,p{cursor: pointer;}
 #header {
 	width: 1400px;
 	height: 550px;
@@ -29,7 +30,8 @@ body{background-color: #e3e3e3;}
 	left: 50%;
 	top: 50%;
 	transform: translate(-60px, -60px);
-	opacity: 0;
+	/*opacity: 0;*/
+	display: none;
 	pointer-events: none;
 	/*-webkit-opacity: 1;*/
 }
@@ -121,6 +123,9 @@ body{background-color: #e3e3e3;}
 	background: white;
 	position: relative;
 }
+#container .hotArts-title a:hover{
+	color: #F06000;
+}
 .hotArts-title .title{
 	font-family: "微软雅黑";
 	line-height: 76px;
@@ -163,6 +168,7 @@ body{background-color: #e3e3e3;}
 }
 .hotArts-title .hotList li{
 	float: left;
+	color: #BDBDBD;
 }
 .hotArts-title .hotList a{
 	font-family: "微软雅黑";
@@ -204,6 +210,19 @@ body{background-color: #e3e3e3;}
 	display: block;
 	position: relative;
 }
+#hotArts-content .tvList .v-item .video .dj-ico{
+	display: inline-block;
+	width: 36px;
+	height: 24px;
+	background: #f06000;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	line-height: 24px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	color: white;
+}
 #hotArts-content .tvList .v-item .video .innerTitle{
 	color: white;
 	font-size: 14px;
@@ -239,7 +258,7 @@ body{background-color: #e3e3e3;}
 	position: absolute;
 }
 #hotArts-content .tvList .v-item .video .showIcon{
-	display: block;
+	/*display: block;*/
 	width: 52px;
 	height: 52px;
 	background: url(../img/player-1.png) no-repeat;
@@ -324,6 +343,66 @@ body{background-color: #e3e3e3;}
 }
 #todayArts-content li:not(:nth-of-type(5n)){
 	margin-right: 20px;
+}
+
+#todayArts-content .todayTvList .v-item .video
+{
+	display: block;
+	position: relative;
+}
+#todayArts-content .todayTvList .v-item .video .innerTitle{
+	color: white;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	white-space: nowrap;
+	word-break: keep-all;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-indent: 5px;
+	bottom: 18px;
+	position: absolute;
+	font-family: "微软雅黑";
+}
+#todayArts-content .todayTvList .v-item .video .mainInfo{
+	color: #bdbdbd;
+	font-size: 12px;
+	line-height: 20px;
+	width: 100%;
+	text-indent: 5px;
+	bottom: 0;
+	font-family: "微软雅黑";
+	position: absolute;
+}
+#todayArts-content .todayTvList .v-item .video .showIcon{
+	width: 52px;
+	height: 52px;
+	background: url(../img/player-1.png) no-repeat;
+	top: 50%;
+	left: 50%;
+	transform: translate(-26px,-26px);
+	position: absolute;
+}
+#todayArts-content .todayTvList .v-item .video .dj-ico{
+	display: inline-block;
+	width: 36px;
+	height: 24px;
+	background: #f06000;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	line-height: 24px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	color: white;
+}
+#todayArts-content .todayTvList .v-item .video .memberIcon{
+	display: block;
+	width: 63px;
+	height: 63px;
+	background: url(../img/v-mark-vipfree.png) no-repeat;
+	position: absolute;
+	top: 0;
 }
 #todayArts-content .leftCon{
 	position: absolute;
@@ -570,6 +649,9 @@ body{background-color: #e3e3e3;}
 	text-indent: -200%;
 	overflow: hidden;
 }
+.cfooter .footer-links li a:hover{
+	color: #F06000;
+}
 .cfooter .c-footer-list ul{
 	line-height: 30px;
 	white-space: nowrap;
@@ -582,6 +664,7 @@ body{background-color: #e3e3e3;}
 .cfooter .c-footer-list a{
 	text-decoration: blink;
 }
+
 .cfooter .c-footer-list li:after{
 	content: '|';
 	color: #666;

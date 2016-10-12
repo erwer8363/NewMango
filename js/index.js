@@ -48,9 +48,9 @@ $(document).ready(function() {
 
 //	主图小图标移到上面上时候变化
 	$(".banner").hover(function() {
-		$(".playIcon").css('opacity', 1);
+		$(".playIcon").fadeIn(200);//css('opacity', 1);
 	}, function() {
-		$(".playIcon").css('opacity', 0);
+		$(".playIcon").fadeOut(200);
 	});
 
 	$("#tvList li").hover(function() {
@@ -98,11 +98,9 @@ $(document).ready(function() {
 		}, 10000);
 	}
 	
-	$("#hotArts-content .tvList .v-item .video").hover(function(){
-		$(this).children('.o').addClass('showIcon');
-//		$("#hotArts-content .tvList .v-item .video .o").addClass('showIcon');
+	$(".v-item .video").hover(function(){
+		$(this).children('.o').addClass('showIcon').css('display','none').fadeIn(400);//.fadeIn(10000);
 	},function(){
-//		$("#hotArts-content .tvList .v-item .video .o").removeClass('showIcon');
 		$(this).children('.o').removeClass('showIcon');
 	});
 	
