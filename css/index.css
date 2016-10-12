@@ -24,12 +24,14 @@ body{background-color: #e3e3e3;}
 .banner .playIcon {
 	width: 125px;
 	height: 125px;
-	background: url(img/focus-play-ico.png) no-repeat;
+	background: url(../img/focus-play-ico.png) no-repeat;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-60px, -60px);
 	opacity: 0;
+	pointer-events: none;
+	/*-webkit-opacity: 1;*/
 }
 
 #header .nav {
@@ -66,6 +68,7 @@ body{background-color: #e3e3e3;}
 	position: absolute;
 	top: 276px;
 	left: 198px;
+	pointer-events: none;
 	text-shadow: 1px 1px 1px black;
 }
 
@@ -81,6 +84,7 @@ body{background-color: #e3e3e3;}
 	font-style: italic;
 	font-size: 12px;
 	color: white;
+	font-family: "微软雅黑";
 	margin-bottom: 16px;
 }
 
@@ -196,6 +200,55 @@ body{background-color: #e3e3e3;}
 	margin-left: 20px;
 	margin-bottom: 20px;
 }
+#hotArts-content .tvList .v-item .video{
+	display: block;
+	position: relative;
+}
+#hotArts-content .tvList .v-item .video .innerTitle{
+	color: white;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	white-space: nowrap;
+	word-break: keep-all;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-indent: 5px;
+	bottom: 18px;
+	position: absolute;
+	font-family: "微软雅黑";
+}
+#hotArts-content .tvList .v-item .video .mainInfo{
+	color: #bdbdbd;
+	font-size: 12px;
+	line-height: 20px;
+	width: 100%;
+	text-indent: 5px;
+	bottom: 0;
+	font-family: "微软雅黑";
+	position: absolute;
+}
+#hotArts-content .tvList .v-item .video .lastInfo{
+	color: #BDBDBD;
+	font-size: 12px;
+	line-height: 20px;
+	width: 100%;
+	text-indent: 78%;
+	bottom: 0;
+	font-family: "微软雅黑";
+	position: absolute;
+}
+#hotArts-content .tvList .v-item .video .showIcon{
+	display: block;
+	width: 52px;
+	height: 52px;
+	background: url(../img/player-1.png) no-repeat;
+	top: 50%;
+	left: 50%;
+	transform: translate(-26px,-26px);
+	position: absolute;
+}
+
 #hotArts-content .arrowCon{
 	/*display: block;*/
 	float: right;

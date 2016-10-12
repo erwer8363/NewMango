@@ -95,8 +95,16 @@ $(document).ready(function() {
 			$(".text .des").text(curTv.des);
 			$(".text .time .txt").html(curTv.txt);
 			
-		}, 3000);
+		}, 10000);
 	}
+	
+	$("#hotArts-content .tvList .v-item .video").hover(function(){
+		$(this).children('.o').addClass('showIcon');
+//		$("#hotArts-content .tvList .v-item .video .o").addClass('showIcon');
+	},function(){
+//		$("#hotArts-content .tvList .v-item .video .o").removeClass('showIcon');
+		$(this).children('.o').removeClass('showIcon');
+	});
 	
 //	按钮点击更换图片
 	var tvBar = $(".tvList ul");
