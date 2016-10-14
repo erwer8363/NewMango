@@ -454,7 +454,6 @@ li,p{cursor: pointer;}
 }
 
 #hotArts-content .arrowCon{
-	/*display: block;*/
 	float: right;
 	margin-top: 100px;
 	margin-right: 15px;
@@ -476,6 +475,7 @@ li,p{cursor: pointer;}
 	width: 1404px;
 	height: 80px;
 	margin: 0 auto 12px;
+	position: relative;
 }
 .todayArts-title .title{
 	font-family: "微软雅黑";
@@ -506,6 +506,32 @@ li,p{cursor: pointer;}
 	left: 1090px;
 	padding: 20px;
 }
+.todayArts-title .todayArts-list{
+	width: 690px;
+	height: 26px;
+	position: absolute;
+	top: 28px;
+	left: 420px;
+}
+.todayArts-title .todayArts-list li{
+	float: left;
+}
+.todayArts-title .todayArts-list li:not(:last-child):after{
+	content: "|";
+	color: darkgray;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+.todayArts-title .todayArts-list li a{
+	color: darkgray;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	line-height: 26px;
+}
+.todayArts-title .todayArts-list li a:hover{
+	color: orange;
+}
+
 #todayArts-content{
 	position: relative;
 	width: 1403px;
@@ -850,12 +876,13 @@ li,p{cursor: pointer;}
 	text-decoration: blink;
 }
 
-.cfooter .c-footer-list li:after{
+.cfooter .c-footer-list li:not(:last-child):after{
 	content: '|';
 	color: #666;
-	position: absolute;
+	width: 20px;
 	left: 100%;
 	top: 0;
+	display: inline-block;
 }
 
 .cfooter .c-footer-safty .police{
