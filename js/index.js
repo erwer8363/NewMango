@@ -46,6 +46,20 @@ $(document).ready(function() {
 
 	autoPlay();
 
+//	标题头部,移到更多标签上时,会显示更多信息
+	$("li.more").mouseenter(function(){
+		$(".head-menu .extend").css('visibility','visible');
+	}).mouseleave(function(){
+		$(".extend").css('visibility','hidden');
+	});
+	
+	$(".extend").mouseenter(function(){
+		$(this).css('visibility','visible');
+	}).mouseleave(function(){
+		$(this).css('visibility','hidden');
+	});
+
+
 //	主图小图标移到上面上时候变化
 	$(".banner").hover(function() {
 		$(".playIcon").fadeIn(200);//css('opacity', 1);
@@ -99,7 +113,7 @@ $(document).ready(function() {
 	}
 	
 	$(".v-item .video").hover(function(){
-		$(this).children('.o').addClass('showIcon').css('display','none').fadeIn(400);//.fadeIn(10000);
+		$(this).children('.o').addClass('showIcon').css('display','none').fadeIn(400);
 	},function(){
 		$(this).children('.o').removeClass('showIcon');
 	});

@@ -4,6 +4,191 @@ ol,ul {list-style: none;}
 img {display: block;vertical-align: top; border: none;}
 body{background-color: #e3e3e3;}
 li,p{cursor: pointer;}
+
+.main-title{
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: -700px;
+	z-index: 100;
+	width: 1400px;
+	height: 56px;
+	min-width: 768px;
+	overflow: visible;
+	font-size: 14px;
+	line-height: 56px;
+	color: #b9b9b9;
+	background: url(../img/header-bg.png) repeat-x #222;
+	transition: background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+	/*pointer-events: none;*/
+}
+.mode-ts{
+	background-color: transparent;
+}
+.leftTitle .title-nav{
+	width: 1184px;
+	height: 100%;
+	margin-left: 106px;
+	background: red;
+}
+.title-nav .title-logo{
+	display: block;
+	width: 94px;
+	text-indent: -200%;
+	overflow: hidden;
+	margin-right: 25px;
+	float: left;
+	background: url(../img/logo-94-25.png) 0 45% no-repeat;
+}
+.title-nav .head-menu{
+	float: left;
+	width: 375px;
+	height: 100%;
+	position: relative;
+	margin-right: 1px;
+	/*background: green;*/
+}
+.head-menu .default{
+	height: 100%;
+	overflow: hidden;
+}
+.head-menu .default ul:after{
+	content: "\2008";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.head-menu .default li{
+	float: left;
+	margin-right: 15px;
+}
+.head-menu .default li a{
+	display: block;
+}
+.head-menu .default li.more a{
+	position: relative;
+	padding-right: 17px;
+}
+.head-menu .default a:hover{
+	color: #BDBDBD;
+}
+.head-menu .default a{
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.head-menu .extend{
+	position: absolute;
+	line-height: 50px;
+	height: 50px;
+	padding: 0 10px;
+	border-radius: 5px;
+	background: url(../img/extend-bg.png);
+	right: 0;
+	top: 66px;
+	z-index: 1000;
+}
+.head-menu .extend:before{
+	bottom: 100%;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-style: solid;
+	border-color: transparent;
+	border-bottom-color: rgba(0,0,0,.8);
+	border-width: 6px;
+	margin-left: -6px;
+	left: auto;
+	right: 13%;
+}
+.head-menu .extend li{
+	float: left;
+	margin-left: 13px;
+}
+.head-menu .extend li a{
+	color: white;
+	padding-right: 10px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	
+}
+.leftTitle .honey-header-search{
+	float: left;
+	margin: 13px 0;
+	position: relative;
+}
+.leftTitle .honey-header-search .c-search-form .text{
+	display: block;
+	width: 160px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 3px 30px 3px 10px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	background: url(../img/mode-ts-searchbg.png) right 0 no-repeat;
+}
+.leftTitle .title-panel{
+	width: 350px;
+	height: 100%;
+	float: left;
+	margin-left: 265px;
+}
+.leftTitle .title-panel li{
+	float: left;
+}
+.leftTitle .title-panel li:not(:last-child){
+	margin-left: 22px;
+}
+.leftTitle .title-panel li:last-child{
+	margin-left: 10px;
+}
+.leftTitle .title-panel li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.leftTitle .title-panel li a:hover{
+	color: #BDBDBD;
+}
+.rightTitle{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 52px;
+	height: 46px;
+	background: url(../img/client-bg.png) right top no-repeat;
+}
+.rightTitle a{
+	line-height: 13px;
+}
+.rightTitle i{
+	display: inline-block;
+	vertical-align: top;
+	background: url(../img/sprite-a.png) no-repeat;
+	cursor: pointer;
+}
+.rightTitle .down{
+	display: block;
+}
+.rightTitle .down i{
+	background-position: -104px -57px;
+	width: 13px;
+	height: 12px;
+	margin: 12px 0 0 27px;
+}
+.rightTitle .phone{
+	display: none;
+}
+.rightTitle .pc{
+	display: none;
+}
+
+
+
 #header {
 	width: 1400px;
 	height: 550px;
