@@ -42,7 +42,15 @@ $(document).ready(function() {
 		status: '',
 		des: '四大男神打的够爽,彭于晏够帅够拽,刘青云够酷够侠,古天乐狗血够狠,吴京打打打停不下来,随便哪个男神都值得一看.',
 		txt: ''
-	}]
+	}];
+	
+	$(window).scroll(function(){
+		if($(this).scrollTop()>1){
+			$(".backtop").fadeIn().css('opacity',1);
+		}else{
+			$(".backtop").fadeOut();
+		}
+	});
 
 	autoPlay();
 
@@ -205,5 +213,25 @@ $(document).ready(function() {
 		if(curPage<=0){
 			$(this).parent().removeClass('leftAdCon');
 		}
+	});
+	$(".appdown").hover(function(){
+		$(".code-img").css('display','block');
+	},function(){
+		$(".code-img").css('display','none');
+	});
+	
+	$(".feedback").hover(function(){
+		$(this).animate({right:0},10);
+	},function(){
+		$(this).animate({right:-65},10);
+	});
+	$(".backtop").hover(function(){
+		$(this).animate({right:0},10);
+	},function(){
+		$(this).animate({right:-65},10);
+	});
+	$(".backtop").click(function(){
+		$("html,body").animate({scrollTop:0},'slow');
+		return false;
 	})
 });

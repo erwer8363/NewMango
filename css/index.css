@@ -879,9 +879,8 @@ li,p{cursor: pointer;}
 .cfooter .c-footer-list li:not(:last-child):after{
 	content: '|';
 	color: #666;
-	width: 20px;
-	left: 100%;
-	top: 0;
+	margin-right: 5px;
+	padding-right: 5px;
 	display: inline-block;
 }
 
@@ -891,4 +890,68 @@ li,p{cursor: pointer;}
 .cfooter .c-footer-safty .police a{
 	display: inline-block;
 	margin-right: 20px;
+}
+
+.honey-feedback-floatbtn{
+	display: inline-block;
+	position: fixed;
+	right: 0;
+	bottom: 5px;
+	z-index: 9000;
+}
+.honey-feedback-floatbtn p .appdown{
+	display: block;
+	width: 98px;
+	height: 40px;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid #e0e0e0;
+	position: absolute;
+	bottom: 94px;
+	right: -65px;
+	background: url(../img/ico.png) 10px 12px no-repeat #fff;
+}
+.honey-feedback-floatbtn p .appdown:hover{
+	background-position: 13px 115px;
+	height: auto;
+	right: -1px;
+	border-radius: 5px 0 0 5px;
+}
+.honey-feedback-floatbtn p .appdown .code-img{
+	display: none;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	margin: 15px 0 55px 10px;
+}
+.honey-feedback-floatbtn p .feedback{
+	display: block;
+	width: 98px;
+	height: 40px;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid #E0E0E0;
+	position: absolute;
+	bottom: 47px;
+	margin-top: 6px;
+	right: -65px;
+	background: url(../img/ico.png) 10px -36px no-repeat #FFFFFF;
+}
+.honey-feedback-floatbtn p .backtop{
+	display: block;
+	width: 98px;
+	height: 40px;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid #E0E0E0;
+	position: absolute;
+	right: -65px;
+	bottom: 0;
+	background: url(../img/ico.png) 10px -82px no-repeat #FFFFFF;
+}
+.clearfix:after{
+	content: '\200B';
+	display: block;
+	height: 0;
+	clear: both;
 }
